@@ -118,6 +118,8 @@ class MetaMaskVirtualWallet
       this.provider = await detectMetamaskSupport(windowObject)
     }
 
+    console.log("loadWallet", this.provider)
+
     await init({
       name: "MetaMaskStarknetSnapWallet",
       remotes: [

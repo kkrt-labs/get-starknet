@@ -78,9 +78,11 @@ export const connect = async ({
   modalTheme,
   ...restOptions
 }: ConnectOptions = {}): Promise<StarknetWindowObject | null> => {
+  console.log("connect request", restOptions)
   const authorizedWallets = await sn.getAuthorizedWallets({
     ...restOptions,
   })
+  console.log("authorizedWallets", authorizedWallets)
 
   const lastWallet = await sn.getLastConnectedWallet()
   if (modalMode === "neverAsk") {

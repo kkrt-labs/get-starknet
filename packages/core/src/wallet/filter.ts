@@ -37,11 +37,13 @@ export const filterByAuthorized = async (
         const result: Permission[] = await wallet.request({
           type: "wallet_getPermissions",
         })
+        console.log("getPermissions for", wallet.name, result)
         return result.includes(Permission.ACCOUNTS)
       } catch {
         return false
       }
     }),
   )
+  console.log("filterByAuthorized", preAuthResponses)
   return wallets.filter((_, i) => preAuthResponses[i])
 }

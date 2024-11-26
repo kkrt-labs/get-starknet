@@ -30,9 +30,13 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@kakarot-adapters/core": "link:^0.0.1",
     "@module-federation/runtime": "^0.1.2",
     "@starknet-io/types-js": "^0.7.7",
-    "async-mutex": "^0.5.0"
+    "async-mutex": "^0.5.0",
+    "mipd": "^0.0.7",
+    "starknet": "^6.11.0",
+    "viem": "^2.21.50"
   },
   "devDependencies": {
     "c8": "^7.12.0",

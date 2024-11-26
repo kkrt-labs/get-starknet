@@ -4,11 +4,26 @@ import dts from "vite-plugin-dts"
 import { defineConfig } from "vitest/config"
 
 export default defineConfig({
+  optimizeDeps: {
+    // 👈 optimizedeps
+    esbuildOptions: {
+      target: "esnext",
+      // Node.js global to browser globalThis
+      define: {
+        global: "globalThis",
+      },
+      supported: {
+        bigint: true,
+      },
+    },
+  },
   build: {
+    target: ["esnext"],
     rollupOptions: {
       output: {
         exports: "named",
       },
+      external: ["@kakarot-adapters/core"],
     },
     emptyOutDir: false,
     lib: {

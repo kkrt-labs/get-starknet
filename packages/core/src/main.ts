@@ -137,6 +137,7 @@ export function getStarknet(
       const permissions: Permission[] = await wallet.request({
         type: "wallet_getPermissions",
       })
+      console.log("Permissions for wallet", wallet.name, permissions)
       if (!permissions?.includes(Permission.ACCOUNTS)) {
         throw new Error("Failed to connect to wallet")
       }
