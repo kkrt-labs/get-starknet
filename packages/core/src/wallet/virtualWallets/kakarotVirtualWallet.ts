@@ -1,7 +1,11 @@
 import { VirtualWallet } from "../../types"
 import { KakarotAdapter } from "@kakarot-adapters/core"
 import { KakarotWalletDetails } from "@kakarot-adapters/core/src/adapter"
-import { RpcMessage, StarknetWindowObject } from "@starknet-io/types-js"
+import {
+  RpcMessage,
+  StarknetWindowObject,
+  WalletEventHandlers,
+} from "@starknet-io/types-js"
 import { Mutex } from "async-mutex"
 import { EIP6963ProviderDetail, createStore } from "mipd"
 
@@ -72,6 +76,10 @@ class KakarotVirtualWallet implements VirtualWallet {
       return this.walletLogic.request(arg) as unknown as Data["result"]
     })
   }
+
+  // Kakarot Adapted Wallets do not support `on` and `off` method
+  on() {}
+  off() {}
 }
 
 async function createKakarotVirtualWallets(

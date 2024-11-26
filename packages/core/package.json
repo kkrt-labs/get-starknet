@@ -30,7 +30,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@kakarot-adapters/core": "link:^0.0.1",
+    "@kakarot-adapters/core": "link:/Users/msaug/kkrt-labs/kakarot-adapters/packages/core",
     "@module-federation/runtime": "^0.1.2",
     "@starknet-io/types-js": "^0.7.7",
     "async-mutex": "^0.5.0",

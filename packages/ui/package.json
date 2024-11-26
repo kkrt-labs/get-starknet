@@ -30,7 +30,8 @@
     "dev": "vite build --watch"
   },
   "dependencies": {
-    "@starknet-io/get-starknet-core": "workspace:*",
+    "@kakarot-adapters/core": "link:/Users/msaug/kkrt-labs/kakarot-adapters/packages/core",
+    "@starknet-io/get-starknet-core": "link:/Users/msaug/kkrt-labs/get-starknet/packages/core",
     "bowser": "^2.11.0"
   },
   "devDependencies": {
